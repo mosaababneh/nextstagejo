@@ -27,8 +27,8 @@ class CompanyRequest extends FormRequest
 
         return [
             'Name' => 'required',//numeric
-            'email' => 'required',//numeric
-            'website' => 'required|regex:'.$regex ,
+            'email' => 'nullable',//numeric
+            'website' => 'nullable|regex:'.$regex ,
             'logo' => 'nullable|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=100,min_height=100',
 
         ];
