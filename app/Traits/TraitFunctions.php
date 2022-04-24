@@ -19,7 +19,13 @@ namespace App\Traits;
             $file->move(
                 base_path() . $path, $fileNameToStore
             );
-
+            /*
+              $thumbStore = 'thumb.'.$filename.'_'.time().'.'.$extension;
+            $thumb = Image::make($file->getRealPath());
+            $thumb->resize(80, 80);
+            $thumb->save('storage/app/public'.$thumbStore);
+		
+         */
 
         } else {
             $fileNameToStore = 'Logo_.png';
