@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('employees', function (Blueprint $table) {
+         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->integer('company_id');//Company
             $table->char('First_name', 50);	
             $table->char('last_name', 50);	
-            $table->char('email', 100);	
-            $table->char('phone', 16);	
+            $table->char('email', 100)->nullable();	
+            $table->char('phone', 14)->nullable();	
             $table->timestamps();
         });
     }
